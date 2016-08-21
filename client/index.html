@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <title>File download on Node.js</title>
+    <script src="js/jquery.min.js"></script>
+</HEAD>
+
+<BODY>
+    <h1>File download on Node.js using AWS EC2 and ElastiCache</h1>
+    <h2>Directions:</h2>
+    <p>1. Download a JSON file.</p>
+
+        Key: <input id="keyInput" type="text" />
+        <input id="downloadID" type="submit" value="Download"/>
+ 
+	<p id="theValue"></p>
+
+    <script type="text/javascript">
+        $("#downloadID").click(function() {
+            var key = $("#keyInput").val();
+            $.ajax({
+                url: '/key/' + key,
+                type: 'GET',
+                success: function(data) {
+                    console.log("Success");
+                    $("#theValue").append(data);
+                }
+            });
+        });
+    </script>
+</BODY>
+</HTML>
