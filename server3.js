@@ -79,7 +79,7 @@ router.post('/', function(req, res) {
 
     // Directory that stores the JSON file.
     var filepath = file.path;
-    var filename = file.path;
+    var filename = file.name;
 
     // Prints out the directory location of the uploaded JSON file.
     console.log("File successfully saved in: " + filename);
