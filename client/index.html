@@ -19,20 +19,7 @@
         <input id="downloadID" type="submit" value="Download"/>
  
 	<p id="theValue"></p>
-
-    <script type="text/javascript">
-        $("#downloadID").click(function() {
-            var key = $("#keyInput").val();
-            $.ajax({
-                url: '/key/' + key,
-                type: 'GET',
-                success: function(data) {
-                    console.log("Success");
-                    $("#theValue").append(data);
-                }
-            });
-        });
-    </script>
+    <script src="js/jQueryDownload.js"></script>
     <footer id="bottomFooter">The Coca-Cola Company&trade;
     <br>
     Global IT Digital Platforms Team
