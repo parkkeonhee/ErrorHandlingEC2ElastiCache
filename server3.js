@@ -78,13 +78,14 @@ router.post('/', function(req, res) {
     var fs = require('fs');
 
     // Directory that stores the JSON file.
+    var filepath = file.path;
     var filename = file.path;
 
     // Prints out the directory location of the uploaded JSON file.
     console.log("File successfully saved in: " + filename);
 
     // Read a file from fs, store it in Redis, get it back from Redis, write it back to fs.
-    fs.readFile(filename, function(err, data) {
+    fs.readFile(filepath, function(err, data) {
       if (err) throw err;
       console.log("Read " + data.length + " bytes from filesystem.");
 
