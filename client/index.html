@@ -16,23 +16,6 @@
     <li><p>The JSON file will display below.</p></li>
     </ol>
     
-    <script src="js/download.js"></script>
-    <!--
-    <script>
-    $("#downloadID").click(function() {
-    	var key = $("#userKeyInput").val();
-    	$.ajax({
-    		url: '/key/' + key,
-    		type: 'GET',
-    		success: function(data) {
-    			console.log("Success");
-    			$("#returnedValue").append(data);
-    		}
-    	});
-  });
-    </script>
-    -->
-    
     <p>Key: <input id="userKeyInput" type="text" />
     <input id="downloadID" type="submit" value="Download"/>
     </p>
@@ -40,6 +23,8 @@
     <div>
     <p id="returnedValue"></p>
     </div>
+    
+    <script src="js/download.js"></script>
     
     <footer id="bottomFooter">The Coca-Cola Company&trade;
     <br>
