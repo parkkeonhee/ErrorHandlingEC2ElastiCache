@@ -2,7 +2,7 @@
 <HTML>
 <HEAD>
     <meta charset="utf-8">
-    <title>File download on Node.js</title>
+    <title>File download on Node.js from ElastiCache</title>
     <script src="js/jquery.min.js"></script>
 </HEAD>
 
@@ -16,7 +16,7 @@
     <li><p>The JSON file will display below.</p></li>
     </ol>
     
-    <p>Key: <input id="keyInput" type="text" />
+    <p>Key: <input id="userKeyInput" type="text" />
     <input id="downloadID" type="submit" value="Download"/>
     </p>
     
@@ -27,7 +27,7 @@
     <script src="js/jQueryDownload.js" type="text/javascript"></script>
     <!--<script>
     $("#downloadID").click(function() {
-    	var key = $("#keyInput").val();
+    	var key = $("#userKeyInput").val();
     	$.ajax({
     		url: '/key/' + key,
     		type: 'GET',
