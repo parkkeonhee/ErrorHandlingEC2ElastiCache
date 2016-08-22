@@ -6,7 +6,7 @@
       type: 'GET',
       success: function(data) {
         console.log("Success");
-        $("#theValue").append(data);
+        $("#returnedValue").append(data);
       }
     });
   });
