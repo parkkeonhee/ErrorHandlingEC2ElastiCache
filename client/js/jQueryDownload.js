@@ -1,6 +1,6 @@
 <script type="text/javascript">
   $("#downloadID").click(function() {
-  var key = $("#keyInput").val();
+  var key = $("#userKeyInput").val();
     $.ajax({
       url: '/key/' + key,
       type: 'GET',
