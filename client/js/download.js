@@ -1,6 +1,4 @@
-console.log("About to do jQuery download click function");
-  $("#downloadID").click(function() {
-  console.log("Inside jQuery download click function");
+$("#downloadID").click(function() {
   var key = $("#userKeyInput").val();
     $.ajax({
       url: '/key/' + key,
@@ -10,4 +8,4 @@ console.log("About to do jQuery download click function");
         $("#returnedValue").append(data);
       }
     });
-  });
+});
