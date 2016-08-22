@@ -1,4 +1,3 @@
-<script type="text/javascript">
 console.log("About to do jQuery download click function");
   $("#downloadID").click(function() {
   console.log("Inside jQuery download click function");
@@ -12,4 +11,3 @@ console.log("About to do jQuery download click function");
       }
     });
   });
-</script>
