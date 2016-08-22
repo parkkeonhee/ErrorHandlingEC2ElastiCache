@@ -21,7 +21,7 @@
     </p>
     
     <div>
-    <p id="theValue"></p>
+    <p id="returnedValue"></p>
     </div>
     
     <script src="js/jQueryDownload.js" type="text/javascript"></script>
@@ -33,7 +33,7 @@
     		type: 'GET',
     		success: function(data) {
     			console.log("Success");
-    			$("#theValue").append(data);
+    			$("#returnedValue").append(data);
     		}
     	});
   });
