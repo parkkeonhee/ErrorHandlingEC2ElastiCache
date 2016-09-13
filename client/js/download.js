@@ -5,7 +5,15 @@ $("#downloadID").click(function() {
       type: 'GET',
       success: function(data) {
         console.log("Success");
-        $("#returnedValue").append(data);
-      }
+
+	alert(data);
+	var temp = JSON.parse(data);
+	alert(temp);
+        $("#returnedValue").append(JSON.stringify(temp, null, 4));
+      },
+	error: function(request, status, error) {
+	alert("error");
+		$("#returnedValue").append("Error has occurred.");
+	}
     });
 });

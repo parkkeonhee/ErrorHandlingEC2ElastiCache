@@ -48,15 +48,24 @@ router.get('/key/:key', function (req, res) {
   var filename = req.params.key;
 	debugger;
   client.get(filename, function(err, reply) {
-        if (err) {
+	if (err) {
           console.log("Get error: " + err);
         }
+	else if(reply === null){
+		var error = {"errorMessage": "File does not exist"};
+		console.error(new Error("File does not exist"));
+		res.send(JSON.stringify(error));
+		//res.status = 500;
+		//res.end(error);
+		client.end(true);
+	}
         else {
           fs.writeFile(filename, reply, function(err) {
             if (err) {
               console.log("Error on write: " + err);
             }
             else {
+		console.log(reply);
               console.log("File written.");
               res.send(reply);
             }
